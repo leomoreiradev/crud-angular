@@ -26,8 +26,13 @@ export class ProductService {
   }
 
   //Criando um recurso e tendo como retorno um Observable do tipo Product
+  //POST
   create(product: Product): Observable<Product> {
     //fazendo requisição http post passando a url e o body da requsição
     return this.http.post<Product>(this.baseUrl, product);
+  }
+
+  read(): Observable<Product[]>{
+      return this.http.get<Product[]>(this.baseUrl);
   }
 }
