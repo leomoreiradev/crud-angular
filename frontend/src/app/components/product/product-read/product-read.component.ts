@@ -1,5 +1,5 @@
-import { ProductService } from './../product.service';
-import { Product } from './../product.model';
+import { ProductService } from '../product.service'
+import { Product } from '../product.model'
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
 
   products: Product[] = [];
+  displayedColumns = ['id', 'name', 'price', 'action'];
 
   constructor(private productService: ProductService) { }
 
@@ -17,7 +18,7 @@ export class ProductReadComponent implements OnInit {
   ngOnInit(): void {
     //Busca produtos -> this.productService.read() 
     //quando retorna os produtos chama o subscribe passando os produtos como parametro
-    //subscribe recebe produtos e preenche this.products com o parametro recebido
+    //subscribe recebe produtos como parametro e preenche this.products com o parametro recebido
     this.productService.read().subscribe(products => {
       this.products = products;
       console.log(this.products)

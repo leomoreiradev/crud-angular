@@ -32,7 +32,10 @@ export class ProductService {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
+  //Buscando uma lista de recurso e tendo como retorno um Observable do tipo Product[] (Array de products)
+  //POST
   read(): Observable<Product[]>{
+     //fazendo requisição http get chamando o this.baseUrl ( "http://localhost:3001/products")
       return this.http.get<Product[]>(this.baseUrl);
   }
 }
