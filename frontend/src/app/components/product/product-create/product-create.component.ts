@@ -28,7 +28,7 @@ export class ProductCreateComponent implements OnInit {
     //Chama a função que faz a requisição, quando retorna aciona o subscribe para chamar as funções 
     this.productService.create(this.product).subscribe(() => {
         //Quando chama show message aparece um toast na tela com a mensagem
-        this.productService.showMessage('Produto criado!')
+        this.productService.showMessage('Produto criado com sucesso!')
         //redireciona para tela de produtos
         this.router.navigate(['/products'])
     })

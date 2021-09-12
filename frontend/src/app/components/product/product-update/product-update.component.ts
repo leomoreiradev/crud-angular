@@ -19,8 +19,8 @@ export class ProductUpdateComponent implements OnInit {
 
   //Chamado quando o component se inicia
   ngOnInit(): void {
-    //Pegando o id da rota
-    const id = this.route.snapshot.paramMap.get('id')
+    //Pegando o id da rota (+) na frente do this.route.snapshot.paramMap.get('id') converte pra number
+    const id = +this.route.snapshot.paramMap.get('id')
     //Fazendo chamando readById do service para buscar pelo id 
     this.productService.readById(id).subscribe(product => {
         //Preenchendo a variavel this.product com o product que vem da api

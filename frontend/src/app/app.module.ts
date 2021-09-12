@@ -34,6 +34,7 @@ import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 /////////////////////////////////////////////////////////////////
 //Chamando o registerLocaleData passando o localePt 
 registerLocaleData(localePt);
@@ -51,7 +52,8 @@ registerLocaleData(localePt);
     ProductCreateComponent,
     ProductReadComponent,
     ProductRead2Component,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent
     
   ],
   ///Quando for usar um componente do material tem que colocar o modulo no imports  abaixo
