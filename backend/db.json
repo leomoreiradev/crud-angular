@@ -16,13 +16,13 @@
       "price": 5000.89
     },
     {
-      "name": "Lapis Preto",
-      "price": "2.50",
+      "name": "Moto",
+      "price": "25000",
       "id": 4
     },
     {
-      "name": "Tese",
-      "price": "010",
+      "name": "TVBOX",
+      "price": "100",
       "id": 5
     }
   ]
